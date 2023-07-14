@@ -18,7 +18,8 @@ EasyDrift is a simple drift counter that also provides a multitude of events and
 - Easy integration with your own HUD
 - Pre made HUD *inspired* by Old School NFS games 
 
-![image](https://forum.cfx.re/uploads/default/original/4X/6/c/b/6cb0eb024218c8da4651c58485e3ade01072cef3.png)
+[![IMAGE ALT TEXT HERE](https://forum.cfx.re/uploads/default/original/4X/6/c/b/6cb0eb024218c8da4651c58485e3ade01072cef3.png)](https://www.youtube.com/watch?v=keY_85E8pW4)
+
 
 
 - Video coming soon 
