@@ -22,7 +22,6 @@ EasyDrift is a simple drift counter that also provides a multitude of events and
 
 
 
-- Video coming soon 
 
 
 ## Events (Client side)
