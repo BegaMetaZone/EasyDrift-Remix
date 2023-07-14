@@ -1,6 +1,7 @@
 # This is a Redesign 
 So all the functionality is still there and unchanged except some UI elements . 
-I included 5 badges that change based on the drift score bracket , honestly I might redesign the second one or add few more .
+I included 5 badges that change based on the drift score bracket .
+honestly I might redesign the second one or add few more .
 Make sure to name the resource "EasyDrift" not "EasyDrift-Remix-Main" or "EasyDrift-Main"
 
 # EasyDrift
@@ -11,9 +12,10 @@ EasyDrift is a simple drift counter that also provides a multitude of events and
 - Drag and drop if you don't want to loose time !
 - Fixed a popular issue on drift counter where low fps would get less score
 - Easy integration with your own HUD
-- Pre made HUD *inspired* by forza
+- Pre made HUD *inspired* by Old School NFS games 
 
 ![image](https://forum.cfx.re/uploads/default/original/4X/6/c/b/6cb0eb024218c8da4651c58485e3ade01072cef3.png)
+Video coming soon 
 
 
 ## Events (Client side)
@@ -74,7 +76,5 @@ print(Modules.DriftCounter.CurrentPoints)
 
 # Support
 
-Want some support or request something to be added ? Come here !
-
-[![Discord2](https://discordapp.com/api/guilds/926120299232112671/widget.png?style=banner4)](https://discord.gg/fhgc3s8HzS)
+Want some support or request something to be added ? Reach me on Discord as BegaMetaZone
 
