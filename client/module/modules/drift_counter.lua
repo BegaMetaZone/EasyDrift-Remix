@@ -7,12 +7,15 @@ Modules.DriftCounter.ChainCooldown = ConfigShared.DriftChainTime
 Modules.DriftCounter.ChainLoopStarted = false
 Modules.DriftCounter.ChainTimeLeft = 0
 Modules.DriftCounter.GlobalAlpha = 0
+Modules.DriftCounter.BadgeAlpha = 0
+Modules.DriftCounter.DriftKing = false
 if ConfigShared.devmod then
     Modules.DriftCounter.GlobalAlpha = 255
 end
 Modules.DriftCounter.InAnimation = false
+Modules.DriftCounter.BadgeInAnimation = false
 Modules.DriftCounter.CachedAllowedVeh = {}
-
+local playerId = source
 
 
 -- Source: https://github.com/Blumlaut/FiveM-DriftCounter/blob/master/driftcounter_c.lua
@@ -104,7 +107,12 @@ function Modules.DriftCounter.StartChainBreakLoop()
             if ConfigShared.UseDefaultUI then
                 Modules.DriftCounter.FadeOutHud()
             end
+            Modules.DriftCounter.BadgeAlpha = 1
             TriggerEvent(ConfigShared.DriftFinishedEvent, Modules.DriftCounter.CurrentPoints)
+            if Modules.DriftCounter.CurrentPoints > 20000 then
+                -- Reward the player for finishing the drift
+                -- TriggerEvent("drift:FinishedDrift", Modules.DriftCounter.CurrentPoints)
+            end
             Modules.DriftCounter.ChainCooldown = ConfigShared.DriftChainTime
             Modules.DriftCounter.ChainLoopStarted = false
             Modules.DriftCounter.CurrentPoints = 0
@@ -135,6 +143,30 @@ function Modules.DriftCounter.FadeOutHud()
         end
         Modules.DriftCounter.InAnimation = false
         Modules.DriftCounter.GlobalAlpha = 0
+    end)
+end
+
+function Modules.DriftCounter.FadeInBadge()
+    Citizen.CreateThread(function()
+        Modules.DriftCounter.BadgeInAnimation = true
+        while Modules.DriftCounter.BadgeAlpha < 255 do
+            Modules.DriftCounter.BadgeAlpha = Modules.DriftCounter.BadgeAlpha + (0.5 * Modules.Utils.TimeFrame)
+            Wait(0)
+        end
+        Modules.DriftCounter.BadgeInAnimation = false
+        Modules.DriftCounter.BadgeAlpha = 255
+    end)
+end
+
+function Modules.DriftCounter.FadeOutBadge()
+    Citizen.CreateThread(function()
+        Modules.DriftCounter.BadgeInAnimation = true
+        while Modules.DriftCounter.BadgeAlpha > 0 do
+            Modules.DriftCounter.BadgeAlpha = Modules.DriftCounter.BadgeAlpha - (0.5 * Modules.Utils.TimeFrame)
+            Wait(0)
+        end
+        Modules.DriftCounter.BadgeInAnimation = false
+        Modules.DriftCounter.BadgeAlpha = 0
     end)
 end
 

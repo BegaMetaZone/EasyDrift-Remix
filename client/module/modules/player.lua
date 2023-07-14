@@ -1,6 +1,11 @@
 Modules.Player = {}
 Modules.Player.IsDead = false
+Modules.Player.PlayerId = nil
 
+function Modules.Player.GetPlayerId()
+    Modules.Player.PlayerId = source
+    return Modules.Player.PlayerId
+end
 
 function Modules.Player.GetPed()
     return PlayerPedId()

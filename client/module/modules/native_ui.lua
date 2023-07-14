@@ -3,6 +3,8 @@ Modules.UI = {}
 Modules.UI.cooldown = false
 Modules.UI.font = {}
 Modules.UI.AnimatedFrames = {}
+Modules.UI.PlayerID = PlayerId()
+print(Modules.UI.PlayerID)
 Modules.UI.pages = {
     ["hud_drift"] = {
         label = "hud_drift",
@@ -10,9 +12,10 @@ Modules.UI.pages = {
         lockControls = false,
         showCursor = false,
         drawFunction = function()
-            Modules.UI.DisplayDrift()
+            Modules.UI.DisplayDrift() -- Modules.UI.DisplayDrift(PlayerId())
+
         end,
-    },
+    },--add module "supeerb" smtn here somehow
 }
 Modules.UI.lockedControls = {
     {24, 30, 31, 32, 33, 34, 35, 69, 70, 92, 114, 121, 140, 141, 142, 257, 263, 264, 331, 1, 2, 4, 5, 17, 16, 15, 14}

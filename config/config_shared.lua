@@ -3,7 +3,7 @@ ConfigShared.devmod = false -- Keep the UI on by default, usefull when tweaking 
 ConfigShared.UseDefaultUI = true -- Set this to false if you want to use your own UI
 
 
-ConfigShared.DriftChainTime = 5000 -- Time in MS
+ConfigShared.DriftChainTime = 3000 -- Time in MS
 ConfigShared.AddStaticPointOnDrifting = true -- Add a static number of point on every frame when the player is drifting
 ConfigShared.StaticPointToAdd = 1 -- This is added every frame, so it will grow very fast
 
@@ -54,10 +54,10 @@ ConfigShared.Position = 1
 -- This allow you to add custom position, first value is pos X of the screen, second in pos Y of the screen.
 -- min value is 0, max value is 1
 ConfigShared.PositionsCoords = {
-    [1] = {0.40104168653488, 0.89259258508682},
+    [1] = {0.40104168653488, 0.92459258508682},
     [2] = {0.40104168653488, 0.05259258508682},
 }
 
 
-ConfigShared.DisplayAngle = true
+ConfigShared.DisplayAngle = false
 ConfigShared.MaxAngle = 50
