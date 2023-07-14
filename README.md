@@ -84,3 +84,6 @@ print(Modules.DriftCounter.CurrentPoints)
 
 Want some support or request something to be added ? Reach me on Discord as BegaMetaZone
 
+# What's next ?
+- Drift King event
+
