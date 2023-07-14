@@ -1,6 +1,10 @@
+# This is a Redesign 
+So all the functionality is still there and unchanged except some UI elements . 
+I included 5 badges that change based on the drift score bracket , honestly I might redesign the second one or add few more .
+Make sure to name the resource "EasyDrift" not "EasyDrift-Remix-Main" or "EasyDrift-Main"
+
 # EasyDrift
 ## A simple drift counter
-[![Image](https://discordapp.com/api/guilds/926120299232112671/widget.png?style=shield)](https://discord.gg/fhgc3s8HzS)
 
 EasyDrift is a simple drift counter that also provides a multitude of events and functions to integrate the system with your own HUD
 
@@ -9,7 +13,7 @@ EasyDrift is a simple drift counter that also provides a multitude of events and
 - Easy integration with your own HUD
 - Pre made HUD *inspired* by forza
 
-![image](https://user-images.githubusercontent.com/19718604/148116457-20785570-ca14-40c7-9948-e8353927d4ed.png)
+![image](https://forum.cfx.re/uploads/default/original/4X/6/c/b/6cb0eb024218c8da4651c58485e3ade01072cef3.png)
 
 
 ## Events (Client side)
@@ -73,3 +77,4 @@ print(Modules.DriftCounter.CurrentPoints)
 Want some support or request something to be added ? Come here !
 
 [![Discord2](https://discordapp.com/api/guilds/926120299232112671/widget.png?style=banner4)](https://discord.gg/fhgc3s8HzS)
+
